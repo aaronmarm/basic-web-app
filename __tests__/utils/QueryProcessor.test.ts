@@ -65,4 +65,12 @@ describe("QueryProcessor", () => {
             "4096"
           ));
     });
+
+    test('minus', () => {
+        const query = "What is 28 minus 8?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "20"
+          ));
+    });
 });
