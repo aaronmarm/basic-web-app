@@ -19,5 +19,18 @@ export default function QueryProcessor(query: string): string {
     );
   }
 
+  if (query.toLowerCase().includes("which of the following numbers is the largest:")) {
+    
+    const arr = query.split(" ");
+    const nums = arr.slice(-3);
+    let ans = -1
+    nums.forEach(num => {
+      ans = Math.max(ans, parseInt(num.substring(0, num.length-1)))
+    });
+    return (
+      ans.toString()
+    );
+  }
+
   return "";
 }
