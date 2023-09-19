@@ -54,5 +54,26 @@ export default function QueryProcessor(query: string): string {
     );
   }
 
+  if (query.toLowerCase().includes("cube")) {
+    // return "test";
+    
+    const arr = query.split(" ");
+    const nums = arr.slice(-7);
+    let ans = ""
+    nums.forEach(num => {
+      const i = parseInt(num.substring(0, num.length-1))
+      if (Number.isInteger(Math.sqrt(i)) &&
+          Number.isInteger(Math.cbrt(i))) {
+            ans = i.toString()
+      }
+      
+    });
+    return (
+      ans
+    );
+    
+  
+  }
+
   return "";
 }
