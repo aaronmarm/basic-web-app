@@ -49,4 +49,12 @@ describe("QueryProcessor", () => {
             "111"
           ));
     });
+
+    test('multiply', () => {
+        const query = "What is 94 multiplied by 10?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "940"
+          ));
+    });
 });
