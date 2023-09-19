@@ -41,4 +41,12 @@ describe("QueryProcessor", () => {
             "53"
           ));
     });
+
+    test('add', () => {
+        const query = "What is 28 plus 83?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "111"
+          ));
+    });
 });

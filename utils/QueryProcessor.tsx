@@ -32,5 +32,16 @@ export default function QueryProcessor(query: string): string {
     );
   }
 
+  if (query.toLowerCase().includes("plus")) {
+    
+    const arr = query.split(" ");
+    const num1 = parseInt(arr[2]);
+    const num2 = parseInt(arr[4]);
+    
+    return (
+      (num1+num2).toString()
+    );
+  }
+
   return "";
 }
